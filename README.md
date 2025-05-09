@@ -27,20 +27,3 @@ This project is open source and welcomes contributions. The codebase has been mo
 3. Start creating!
 
 No build process or server required - it's pure HTML, CSS, and JavaScript.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
-
-## 👥 Contributing
-
-Contributions are welcome! Feel free to:
-
-- Report bugs
-- Suggest new features
-- Submit pull requests
-- Improve documentation
-
-## 🙏 Acknowledgments
-
-Originally created by Simon Heimler as a semester project in 2011, now maintained and modernized by the open source community.
