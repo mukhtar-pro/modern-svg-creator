@@ -1,0 +1,325 @@
+/*
+ html5doctor.com Reset Stylesheet
+ v1.6.1
+ Last Updated: 2010-09-17
+ Author: Richard Clark - http://richclarkdesign.com
+ Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+nav ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+/* change colours to suit your needs */
+ins {
+	background-color: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+/* change colours to suit your needs */
+mark {
+	background-color: #ff9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+del {
+	text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* change border colour to suit your needs */
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #CCC;
+	margin: 1em 0;
+	padding: 0;
+}
+input, select {
+	vertical-align: middle;
+}
+
+/****************************
+ * SVG Generator Stylesheet *
+ * Simon Heimler 2011       *
+ ****************************/
+
+/* Typography & Colors - Dark Theme */
+body {
+	margin: 20px auto;
+	width: 960px;
+	font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+	font-size: 0.8em;
+	line-height: 1.333em;
+	background: #1a1d20;
+	color: #fff;
+}
+
+h1 {
+	font-size: 2.5em;
+	margin: 0.3em 0;
+}
+
+h1 a, h1 a:visited, h1 a:hover {
+	color: #fff;
+	background: none;
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 1.2em;
+	color: #adb5bd;
+	margin: 0 0 0.3em 0;
+}
+
+h3 {
+	font-size: 1.3em;
+	border-bottom: 1px dashed #495057;
+	padding-bottom: 2px;
+	margin-bottom: 7px;
+	color: #e9ecef;
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #adb5bd;
+}
+
+a:hover {
+	background: #343a40;
+}
+
+table {
+	font-size: 0.8em;
+}
+
+.generated { /* Extra Parameters */
+	color: #777;
+}
+
+/* Layout - Reversed */
+header, footer {
+	margin: 10px 0;
+	border-top: 1px dashed #495057;
+	border-bottom: 1px dashed #495057;
+}
+
+aside {
+	float: right;
+	width: 200px;
+	display: block;
+	margin: 0 0 5px 5px;
+}
+
+aside #generator,
+aside #parameter {
+	background: #212529;
+	border: 1px solid #495057;
+	margin: 0 0 5px 0;
+	padding: 5px;
+}
+
+#paper {
+	float: left;
+	width: 753px;
+	height: 511px;
+	background: #343a40;
+	border: 1px solid #495057;
+	padding: 0;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+footer {
+	clear: both;
+	text-align: left;
+	color: #adb5bd;
+	font-size: 0.8em;
+}
+
+#benchmark {
+	float: right;
+	color: #6c757d;
+}
+
+#content {
+	background: #FFF;
+	border: 1px solid #CCC;
+	padding: 7px;
+	margin: 5px 0;
+}
+
+#gallery {
+	text-align: center;
+	margin: 10px 2px;
+}
+
+#gallery a.colorbox {
+	display: block;
+	float: left;
+	width: 252px;
+	height: 172px;
+	border: 1px solid #CCC;
+	background: #EEE;
+	margin: 5px;
+	overflow: hidden;
+}
+
+#gallery a.colorbox:hover {
+	opacity: 0.8;
+}
+
+
+#gallery img {
+	
+}
+
+.clearfix {
+	clear: both;
+	padding: 3px 0;
+}
+
+/* Topmenu */
+nav#top_navigation {
+	margin: 3px 0;
+	float: right;
+	color: #CCC;
+}
+nav#top_navigation a {
+	padding: 0 2px;
+}
+
+/* Parameter Table Dark Theme */
+table {
+	vertical-align: bottom;
+}
+
+tr {
+	padding: 2px;
+}
+
+td {
+	padding: 2px;
+	vertical-align: middle;
+	color: #e9ecef;
+}
+
+tr:hover {
+	background: #2b3035;
+}
+
+tr.error {
+	background: #dc3545;
+	color: #fff;
+}
+
+#tdwidth {
+	width: 81px;
+}
+
+/* Forms Dark Theme */
+#generator button {
+	display: block;
+	margin: 5px 0;
+	width: 188px;
+	background: #343a40;
+	color: #fff;
+	border: 1px solid #495057;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#generator button:hover {
+	background: #495057;
+}
+
+select {
+	width: 188px;
+	background: #343a40;
+	color: #fff;
+	border: 1px solid #495057;
+	padding: 5px;
+}
+
+input {
+	width: 100px;
+	background: #343a40;
+	color: #fff;
+	border: 1px solid #495057;
+	padding: 3px;
+}
+
+textarea {
+	width: 143px;
+	resize: vertical;
+	background: #343a40;
+	color: #fff;
+	border: 1px solid #495057;
+	padding: 3px;
+}
+
+/* Color Picker Dark Theme */
+.colorpick {
+	background: #343a40 !important;
+	color: #fff !important;
+	border: 1px solid #495057 !important;
+}
+
+/* Tooltips Dark Theme */
+.tooltip {
+	background: #212529;
+	color: #fff;
+	border: 1px solid #495057;
+}
+
+/* Misc Stuff */
+
+#paypalbutton {
+	display: inline;
+}
+
+
+/** Tooltipster Theme: Borderless */
+
+.tooltipster-sidetip.tooltipster-borderless .tooltipster-box{border:none;background:#1b1b1b;background:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-box{margin-top:8px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-box{margin-right:8px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-box{margin-left:8px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-box{margin-bottom:8px}.tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow{height:8px;margin-left:-8px;width:16px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow,.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow{height:16px;margin-left:0;margin-top:-8px;width:8px}.tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow-background{display:none}.tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow-border{border:8px solid transparent}.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-border{border-bottom-color:#1b1b1b;border-bottom-color:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow-border{border-left-color:#1b1b1b;border-left-color:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-border{border-right-color:#1b1b1b;border-right-color:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-arrow-border{border-top-color:#1b1b1b;border-top-color:rgba(10,10,10,.9)}.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-uncropped{top:-8px}.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-uncropped{left:-8px}

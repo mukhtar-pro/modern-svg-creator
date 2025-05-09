@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Modern SVG Creator - Free Online Vector Graphics Tool</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Create beautiful SVG vector graphics online with our modern, free tool. Export your designs instantly to SVG format." />
+		<meta name="keywords" content="SVG creator, vector graphics, online tool, free SVG generator, design tool, web graphics, modern design" />
+		<meta name="author" content="Simon Heimler" />
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+		<link rel="icon" type="image/png" href="img/favicon.png">
+
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<header>
+			<h1><a href="index.html">Modern SVG Creator</a></h1>
+			<h2>Create and Export Beautiful Vector Graphics</h2>
+		</header>
+
+		<main class="main-container">
+			<aside>
+				<!-- Controls the Generator -->
+				<div id="generator">
+					<h3>Generator:</h3>
+					<select id="algoselect" onChange="Controller.selectAlgo()" title="Choose between Algorithms" aria-label="Select generation algorithm">
+						<!-- Algorithm Options will be generated here -->
+					</select>
+					<button id="generate" class="tooltip" onclick="Controller.generate()" title="Generate Graphic based on current Selection">Generate!</button>
+					<button id="overlay" class="tooltip" onclick="Controller.overlay()" title="Do not reset the paper and draw the new Graphic over the old one">Overlay!</button>
+					<button id="randomize" class="tooltip" onclick="Controller.randomize()" title="Randomizes Parameters">Randomize!</button>
+					<button id="export" class="tooltip" onclick="Controller.exportSVG()" title="Export the Graphic to a vector .svg file">Export to SVG</button>
+				</div>
+				<!-- Controls the Algorithm Parameters -->
+				<div id="parameter">
+					<h3>Parameters:</h3>
+
+					<table id="parametertable">
+						<tr id="bgcolor" class="tooltip" title="Background Color">
+							<td id="tdwidth"><label for="bgcolor-input">Background:</label></td>
+							<td>
+								<input id="bgcolor-input" class="colorpick" type="text" name="bgcolor" title="Background Color" placeholder="#ffffff"/>
+							</td>
+						</tr>
+						<tr id="count" class="tooltip" title="Number of generated Elements">
+							<td><label for="count-input">Count:</label></td>
+							<td>
+								<input id="count-input" type="text" name="count" title="Number of elements" placeholder="Enter a number > 0"/>
+							</td>
+						</tr>
+						<tr id="stroke" class="tooltip" title="Color of the stroke (Outline)">
+							<td><label for="stroke-input">Stroke Color:</label></td>
+							<td>
+								<input id="stroke-input" class="colorpick" type="text" name="stroke" title="Stroke Color" placeholder="#000000"/>
+							</td>
+						</tr>
+						<tr id="strokeW" class="tooltip" title="Width of the stroke">
+							<td><label for="strokeW-input">Stroke Width:</label></td>
+							<td>
+								<input id="strokeW-input" type="text" name="strokeW" title="Stroke Width" placeholder="Enter width > 0"/>
+							</td>
+						</tr>
+						<tr id="fill" class="tooltip" title="Color of the fill">
+							<td><label for="fill-input">Fill Color:</label></td>
+							<td>
+								<input id="fill-input" class="colorpick" type="text" name="fill" title="Fill Color" placeholder="#ffffff"/>
+							</td>
+						</tr>
+						<tr id="opacity" class="tooltip" title="Opacity of the Elements">
+							<td><label for="opacity-input">Opacity (%):</label></td>
+							<td>
+								<input id="opacity-input" type="text" name="opacity" title="Opacity Percentage" placeholder="0-100"/>
+							</td>
+						</tr>
+						<tr id="minsize" class="tooltip" title="Minimum Size of the Elements">
+							<td><label for="minsize-input">Min Size:</label></td>
+							<td>
+								<input id="minsize-input" type="text" name="minsize" title="Minimum Size" placeholder="Enter size > 0"/>
+							</td>
+						</tr>
+						<tr id="maxsize" class="tooltip" title="Maximum Size of the Elements">
+							<td><label for="maxsize-input">Max Size:</label></td>
+							<td>
+								<input id="maxsize-input" type="text" name="maxsize" title="Maximum Size" placeholder="Enter size > 0"/>
+							</td>
+						</tr>
+						<tr id="paddingV" class="tooltip" title="Vertical (top & bottom) Padding">
+							<td><label for="paddingV-input">Padding V:</label></td>
+							<td>
+								<input id="paddingV-input" type="text" name="paddingV" title="Vertical Padding" placeholder="Enter padding"/>
+							</td>
+						</tr>
+						<tr id="paddingH" class="tooltip" title="Horizontal (left & right) Padding">
+							<td><label for="paddingH-input">Padding H:</label></td>
+							<td>
+								<input id="paddingH-input" type="text" name="paddingH" title="Horizontal Padding" placeholder="Enter padding"/>
+							</td>
+						</tr>
+						<tr id="textbox" class="tooltip" title="Write your own input text here">
+							<td colspan="2">
+								<label for="textbox-input" class="sr-only">Custom Text Input:</label>
+								<textarea id="textbox-input" name="textbox" title="Custom Text" placeholder="Enter custom text here..." rows="3"></textarea>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+
+			</aside>
+
+			<div id="paper" role="main" aria-label="SVG Preview Area">
+				<!-- Online SVG Generator - Simon Heimler -->
+			</div>
+		</main>
+
+		<footer>
+			<div class="footer-content">
+				<span id="benchmark"></span>
+			</div>
+		</footer>
+
+		<!-- JS Libraries: -->
+		<!-- http://www.jquery.com -->
+		<script src="lib/jquery-1.12.4.min.js" type="text/javascript"></script>
+
+		<!-- http://www.raphaeljs.com/ -->
+		<script src="lib/raphael-min.js" type="text/javascript"></script>
+
+		<!-- jQuery Plugin: Color Picker http://www.eyecon.ro/colorpicker/ -->
+		<link rel="stylesheet" media="screen" type="text/css" href="lib/colorpicker/css/colorpicker.css" />
+		<script src="lib/colorpicker/js/colorpicker.min.js" type="text/javascript"></script>
+
+		<link rel="stylesheet" media="screen" type="text/css" href="lib/colors/jquery.minicolors.css">
+		<script src="lib/colors/jquery.minicolors.min.js" type="text/javascript"></script>
+
+		<!-- <link rel="stylesheet" media="screen" type="text/css" href="lib/color-picker-drawr-palette/dist/jquery.drawrpalette-min.js"> -->
+		<!-- <script type="text/javascript" src="lib/color-picker-drawr-palette/dist/jquery.drawrpalette-min.js"></script> -->
+		
+		<script src="lib/tooltipster.min.js" type="text/javascript"></script>
+
+		<script src="js/algorithms.js" type="text/javascript"></script>
+		<script src="js/parameters.js" type="text/javascript"></script>
+		<script src="js/paper.js" type="text/javascript"></script>
+		<script src="js/controller.js" type="text/javascript"></script>
+	</body>
+</html>
